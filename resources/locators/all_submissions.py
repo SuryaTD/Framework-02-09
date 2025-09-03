@@ -138,10 +138,7 @@ CancelButton = "xpath=//button//*[text()='Save and Close']//following::*[text()=
 #Documents
 Documents = "xpath=(//span[text()='Documents'])[1]"
 UserModification = "xpath=//a[@data-cy='asset-card-file-User Mod']"
-<<<<<<< HEAD
 #UserModification = "xpath=(//a[@data-cy='asset-card-file-User Mod'])[1]"
-=======
->>>>>>> 0cc751f5e746deaa767cd17e997cd0a6062db139
 UserModificationVariable = "xpath=//span[@class='ace_variable']"
 UserModificationValue = "xpath=//span[@class='ace_string']"
 
