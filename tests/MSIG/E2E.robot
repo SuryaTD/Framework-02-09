@@ -1863,7 +1863,7 @@ TC_E2E_063
     # Select Impersonate option from the actions    ${NewUser['email']}    ${NewUser['search_user']}
     # Run Keyword And Continue On Failure    Verify My Assignments Tab is displayed as a default tab
     Click All submissions option
-    Select Submission using submission id    a11b0fac-3268-44c0-bd9c-a2e8690a1fe8    @{TC_E2E_063['SubmissionColumnNames']}
+    Select Submission using submission id    ${submission_id_sov}    @{TC_E2E_063['SubmissionColumnNames']}
     Run Keyword And Continue On Failure    Verify Submission page is displayed
     Advance Stage    ${TC_E2E_063['stageNo']}    
     Run Keyword And Continue On Failure    Verify Stage is updated in the submission    ${TC_E2E_063['stage']}
