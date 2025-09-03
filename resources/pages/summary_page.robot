@@ -87,7 +87,11 @@ Enter the Policy Information
     ${element}    Catenate    SEPARATOR=    ${loc1_Select_Type}    ${policy_Info['ClassOfBusiness']}    ']    
     click    ${element} 
     click    ${Loc_Placement_Button}
+<<<<<<< HEAD
     ${place_element}    Catenate    SEPARATOR=    ${loc1_Select_Type}    ${policy_Info['Policy Placement Type']}    ']    
+=======
+    ${place_element}    Catenate    SEPARATOR=    ${loc1_Select_Type}    ${policy_Info['PlacementType']}    ']    
+>>>>>>> 0cc751f5e746deaa767cd17e997cd0a6062db139
     click    ${place_element}
 
 Verify Policy Information Details from Summary Tab
@@ -105,7 +109,11 @@ Verify Policy Information Details from Summary Tab
     ${Actual_ClassOf_Business}    Get Text    ${loc_ClassOf_Business}
       Should Be Equal    ${Actual_ClassOf_Business}    ${expected_Policy_Field['ClassOfBusiness']}
    ${Actual_Placement_Text}    Get Text    ${Loc_Placement_Button}
+<<<<<<< HEAD
     Should Be Equal    ${Actual_Placement_Text}    ${expected_Policy_Field['Policy Placement Type']}
+=======
+    Should Be Equal    ${Actual_Placement_Text}    ${expected_Policy_Field['PlacementType']}
+>>>>>>> 0cc751f5e746deaa767cd17e997cd0a6062db139
      ${Actual_Policy_Field}    Create List
     ${Actual_Policy_Field_Text}    Get Text    ${policy_Field}
    ${Actual_Premium_Field}    Get Text    ${permium_Field}

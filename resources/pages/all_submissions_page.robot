@@ -411,6 +411,7 @@ Fill the data for issues field in Producer
     ...    - `${data_producer_code}`: (Optional) The code for the producer.
     [Arguments]    ${data_producer_name}    ${data_producer_email}    ${data_producer_code}=None
     Scroll To Element    ${ProducerName}
+<<<<<<< HEAD
     ${ActualValue}    Get Text    ${ProducerName}
     ${TrimmedValue}    Strip String    ${ActualValue}
     Log    ${TrimmedValue}
@@ -422,6 +423,11 @@ Fill the data for issues field in Producer
     # Click    ${ProducerName}
     # Type Text    ${ProducerNameInput}    ${data_producer_name}
     # Get Element States    ${UserModForProducerName}    validate    value & visible    'UserModForProducerName should be visible.'
+=======
+    Click    ${ProducerName}
+    Type Text    ${ProducerNameInput}    ${data_producer_name}
+    Get Element States    ${UserModForProducerName}    validate    value & visible    'UserModForProducerName should be visible.'
+>>>>>>> 0cc751f5e746deaa767cd17e997cd0a6062db139
     Scroll To Element    ${ProducerEmailButton}
     Click    ${ProducerEmailButton}
     Type Text    ${ProducerEmailInput}    ${data_producer_email}
@@ -1442,7 +1448,11 @@ Verify updated datas in Issues Tab for Accord127
     ...    *Arguments:*
     ...    - `@{ExpectedPDFText}`: A list of strings containing the expected text for each verified field.
     [Arguments]    @{ExpectedPDFText}
+<<<<<<< HEAD
     @{locators}     Create List    ${Issues_sic_code}    ${Issues_description}    ${Issues_naics_code}    ${Issues_underwriter_name}    ${Issues_underwriter_email}    ${Issues_underwritting_office}    ${Issues_operations_name}    ${Issues_operations_email}    ${Issues_channel}    ${Issues_Agency}    ${Issues_ProducerAddress}    ${Issues_ProducerAddressStreet}    ${Issues_ProducerAddressCity}    ${Issues_ProducerAddressState}    ${Issues_ProducerPostalCode}    ${Issues_ProducerCountry}    ${Issues_ProducerCodeButton}    ${Issues_ProducerEmailButton}
+=======
+    @{locators}     Create List    ${Issues_sic_code}    ${Issues_description}    ${Issues_naics_code}    ${Issues_underwriter_name}    ${Issues_underwriter_email}    ${Issues_underwritting_office}    ${Issues_operations_name}    ${Issues_operations_email}    ${Issues_channel}    ${Issues_Agency}    ${Issues_ProducerAddress}    ${Issues_ProducerAddressStreet}    ${Issues_ProducerAddressCity}    ${Issues_ProducerAddressState}    ${Issues_ProducerPostalCode}    ${Issues_ProducerCountry}    ${Issues_ProducerCodeButton}    ${Issues_ProducerEmailButton}    ${Issues_Product}    ${Issues_ProductSegment}
+>>>>>>> 0cc751f5e746deaa767cd17e997cd0a6062db139
     @{ActualPDFText}    Create List
     FOR    ${locator}    IN    @{locators}
         Scroll To Element    ${locator}
@@ -1454,6 +1464,7 @@ Verify updated datas in Issues Tab for Accord127
     Log    ${ActualPDFText}
     Lists Should Be Equal    ${ExpectedPDFText}    ${ActualPDFText}
 
+<<<<<<< HEAD
 Verify datas in UserModification files
     [Documentation]    Verifies the contents of the 'UserModification' file in the 'Documents' section.
     ...    It compares a list of expected text values with the actual values found in the document.
@@ -1487,3 +1498,8 @@ Verify datas in UserModification files
         Switch To Documents
     END
     
+=======
+    # Log    ${ExpectedPDFText}
+    # Log    ${ActualPDFText}
+    # Lists Should Be Equal    ${ExpectedPDFText}    ${ActualPDFText}
+>>>>>>> 0cc751f5e746deaa767cd17e997cd0a6062db139

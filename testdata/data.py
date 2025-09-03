@@ -3780,7 +3780,11 @@ TC_E2E_056 = {
                                'In Draft','MSIG TEST','Task Edited','Task Test Automation was Edited',
                                'In Draft','System','Task Edited','Test Automation: Status updated from Created to Pending.',
                                'In Draft','MSIG TEST','Task Created','Task Test Automation was Created',],
+<<<<<<< HEAD
     "taskDetails":['Low','Not set','Prabhakaran Sundaram','MSIG TEST','No'],
+=======
+    "taskDetails":['Low','Not set','MSIG TEST','MSIG TEST','No'],
+>>>>>>> 0cc751f5e746deaa767cd17e997cd0a6062db139
     "taskupdateddetails": ['Medium','Not set','MSIG TEST','MSIG TEST','No'], 
     "priority": "Medium",
     "queryList":['d3Submission.d3Company.sic.0.code','d3Submission.d3Company.sic.0.description','d3Submission.d3Company.naics.0.code','d3Submission.d3Client.underwriter.name','d3Submission.d3Client.underwriter.email','d3Submission.d3Client.underwriter.office','d3Submission.d3Client.underwriting_assistant.name','d3Submission.d3Client.underwriting_assistant.email',
@@ -3809,11 +3813,16 @@ TC_E2E_060 = {
     "expectedTextInProducer":['HYLANT GROUP, INC.','50 E BUSINESS WAY STE 420, CINCINNATI, OH 45241, United States','50 E BUSINESS WAY','STE 420','CINCINNATI','OH','45241','United States'],
     "ProducerName":"test",
     "ProducerEmail":"test@convr.com",
+<<<<<<< HEAD
     "ProduceCode":"",
+=======
+    "ProduceCode":"1234",
+>>>>>>> 0cc751f5e746deaa767cd17e997cd0a6062db139
     "EffectiveDate":"10/01/2017",
     "ExpirationDate": "10/01/2018",
     "Product": "Property",
     "FileName":['ACORD125-MSIG.pdf','ACORD_127_1_98_dummy 3.pdf'],
+<<<<<<< HEAD
     "SubmissionColumnNames": ["Status", "Submission", "Submission ID","Product","Workflow Status"],
      "taskdata":{
         "TaskNameDropdown":"Custom",
@@ -3929,6 +3938,8 @@ TC_E2E_061 = {
     ],
     },
      "FileNames":['SOV_Win-Con.xls','LR_Travlers_Win-Con Enterprises.pdf'],
+=======
+>>>>>>> 0cc751f5e746deaa767cd17e997cd0a6062db139
     "SOVFile":"SOV_Win-Con.xls",
     "dropDownOptionsForPropertyDamage":['Total Property Damage Values','Total BPP Values','Total Submitted Building Value'],
     "dropDownOptionsForBoostedPropertyDamage":['Total Boosted Property Damage Values', 'Total Boosted Building Value', 'Total BPP Values'],
@@ -3942,6 +3953,7 @@ TC_E2E_061 = {
     "BoostedBuildingValue":[3655328,0,0, 3655328,0,0, 0, 0, 5590020,0,0, 5590020, 230490,0,0, 230490,0,0, 0, 0],
     "dropdownOptions":['dropDownOptionsForPropertyDamage','dropDownOptionsForBoostedPropertyDamage', 'dropdownOptionsForSubmittedTIV', 'dropdownOptionsForBoostedTIV','dropdownForBoostedBuildingValue'],
     "values":['PropertyDamageValues','BoostedPropertyDamageValues','SubmittedTIVValues','BoostedTIVValues','BoostedBuildingValue'],
+<<<<<<< HEAD
     "CardName":["Total Claims", "Frequency (claims / year)","Average Severity","Total Incurred"],
     "expectedAnalysisData":["3", "1.5","$1,123,228","$3,369,685"],
     "expectedTableData":["2021","$3,298,876","$0","$0","$3,655","1","2022","$70,809","$0","$0","$18,563","2"],
@@ -3963,6 +3975,17 @@ TC_E2E_062 = {
     "SummaryTableHeader":['Product','Status','Eff. Date','Exp. Date','Assigned','Exp. Premium','Agency'],
     "SummaryTableData":['General Liability\nCurrent','Wholesale Team\nCurrent','Under Review','10/01/2017','10/01/2018','-','-','HYLANT GROUP, INC.'],
     "premiumAmount":"1000",
+=======
+    "SubmissionColumnNames": ["Status", "Submission", "Submission ID","Product","Workflow Status"],
+    "Covered":{
+        "Product":"General Liability",
+        "ProductSegment":"Property"
+    }
+}
+
+TC_E2E_061 = {
+    "stage": "Cleared",
+>>>>>>> 0cc751f5e746deaa767cd17e997cd0a6062db139
     "expectedTitle": "Win-Con Inc. – Commercial Building Envelope Contractor",
     "expectedQuestion": {
         "Auto": ["Do any employees use their own personal vehicle to transport goods or people or service clients?",
@@ -4046,14 +4069,19 @@ TC_E2E_062 = {
         "taskReason":"Complete",
         "priority": "Low",
     },
+<<<<<<< HEAD
     "priority": "Medium",
     "taskDetails":['Low','Not set','Prabhakaran Sundaram','MSIG Tester','No'],
     "taskupdateddetails": ['Medium','Not set','MSIG TEST','MSIG TEST','No'], 
+=======
+    "taskDetails":['Low','Not set','MSIG TEST','MSIG TEST','No'],
+>>>>>>> 0cc751f5e746deaa767cd17e997cd0a6062db139
     "emailData":{
         "From":"prabhakaran.sundaram-gdt+msig@convr.com",
         "To":"prabhakaran.sundaram-gdt+msig@convr.com",
         "Subject":"WIN-CON ENTERPRISES, INC",
         "Body":"Test Automation",
+<<<<<<< HEAD
         "AssetName":"ACORD125-MSIG.pdf",
         "FileNames":["ACORD125-MSIG.pdf","ACORD_127_1_98_dummy203.pdf","SOV_Win-Con.xls","LR_Travlers_Win-Con_Enterprises.pdf"]
     },
@@ -4206,6 +4234,20 @@ TC_E2E_063 = {
     "Policy Placement Type":"Excess",
     "MailedDate":"Edit"
     }
+=======
+        "AssetName":"ACORD125-MSIG.pdf"
+    },
+     "emailVerify":["MSIG TEST","WIN-CON ENTERPRISES, INC","prabhakaran.sundaram-gdt+msig@convr.com","ACORD125-MSIG.pdf","Test Automation"],
+     "FileName":['SOV_Win-Con.xls','LR_Travlers_Win-Con Enterprises.pdf'],
+    "SOVFile":"SOV_Win-Con.xls",
+    "CardName":["Total Claims", "Frequency (claims / year)","Average Severity","Total Incurred"],
+    "expectedAnalysisData":["3", "1.5","$1,123,228","$3,369,685"],
+    "expectedTableData":["2021","$3,298,876","$0","$0","$3,655","1","2022","$70,809","$0","$0","$18,563","2"],
+    "expectedWorkFlowHistory":['Cleared', 'System', 'Task Edited', 'Test Automation: Status updated from Created to Pending.', 'Cleared', 'MSIG TEST', 'Task Created', 'Task Test Automation was Created','Cleared', 'MSIG TEST', 'Stage Update', 'Stage updated from In Draft to Cleared'],
+    "Risk360_Card_Names": ["Digital Footprint Score", "Financial Details", "Coverage",   "Valuations"],
+    "Risk360_Card_Pages_Names": ["Digital Footprint Score: ", "Financial Details", "Coverages",   "Valuations"],
+    "SubmissionColumnNames": ["Status", "Submission", "Submission ID","Product"]
+>>>>>>> 0cc751f5e746deaa767cd17e997cd0a6062db139
 }
 
 TC_Email_001={
@@ -4311,7 +4353,11 @@ TC_Forms_002 = {
     "ExpectedInstructionsValues":["Establish NYFTZ eligibility per established company guidelines.","Underwrite risk in conjunction with NY base FTZ contact.","Obtain sign off from FTZ contact prior to releasing quote or policy."],
     "DocumentationData":{
         "Underwriter":"Test",
+<<<<<<< HEAD
         "PolicyNumber":"TRS3423",
+=======
+        "PolicyNumber":"Txt987654",
+>>>>>>> 0cc751f5e746deaa767cd17e997cd0a6062db139
         "PolicyPremium":"1000",
         "NYPremium":"1000"
     },
@@ -4335,7 +4381,11 @@ TC_Forms_003 = {
     "ReasonCardText":['Reason for Documentation','Select a reason for rate deviation.'],
     "GeneralSectionText":['General','Basic policy information.'],
     "GeneralSectionData":{
+<<<<<<< HEAD
     "PolicyNumber":"TRS3423",
+=======
+    "PolicyNumber":"Txt987654",
+>>>>>>> 0cc751f5e746deaa767cd17e997cd0a6062db139
     "PolicyEffectiveDate":"Oct 1, 2017",
     "WritingCompany":"05 - Mitsui Sumitomo Insurance Company Of America"
     },
@@ -4382,7 +4432,11 @@ TC_Forms_004 = {
     }
 TC_Forms_005 = {
     "GeneralData":{
+<<<<<<< HEAD
     "ExpectedPolicyNumber":"TRS3423",
+=======
+    "ExpectedPolicyNumber":"Txt987654",
+>>>>>>> 0cc751f5e746deaa767cd17e997cd0a6062db139
     "ExpectedEffectiveDate":"Oct 1, 2017",
     },
     "TotalPoints":{
@@ -4417,7 +4471,11 @@ TC_Forms_006 = {
  
 TC_Forms_007 = {
     "GeneralData":{
+<<<<<<< HEAD
     "ExpectedPolicyNumber":"TRS3423",
+=======
+    "ExpectedPolicyNumber":"Txt987654",
+>>>>>>> 0cc751f5e746deaa767cd17e997cd0a6062db139
     "ExpectedEffectiveDate":"Oct 1, 2017",
     },
     "TotalPoints":{
