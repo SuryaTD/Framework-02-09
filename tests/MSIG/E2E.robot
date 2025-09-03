@@ -1724,15 +1724,9 @@ TC_E2E_060
     # Select Impersonate option from the actions    ${NewUser['email']}    ${NewUser['search_user']}
     # Run Keyword And Continue On Failure    Verify My Assignments Tab is displayed as a default tab
    ${submission_id}    Create new submission with SOV and Loss run    ${TC_E2E_060['FileName']}    @{TC_E2E_060['SubmissionColumnNames']}
-<<<<<<< HEAD
     Set Suite Variable   ${submission_id_sov}    ${submission_id}
     Select Submission using submission id   ${submission_id}    @{TC_E2E_060['SubmissionColumnNames']}
    Run Keyword And Continue On Failure    Verify Submission page is displayed
-=======
-   Set Suite Variable   ${submission_id_sov}    ${submission_id}
-    Select Submission using submission id   ${submission_id}    @{TC_E2E_060['SubmissionColumnNames']}
-    Run Keyword And Continue On Failure    Verify Submission page is displayed
->>>>>>> 0cc751f5e746deaa767cd17e997cd0a6062db139
    Click Edit Submission
    Run Keyword And Continue On Failure    Click and verify Clearance tab
    Click Insured Tab
@@ -1751,7 +1745,6 @@ TC_E2E_060
    Click Issues Tab
    @{expectedIssues}    Create List    ${TC_E2E_060['SicCode']}    ${TC_E2E_060['SicDescription']} 
      ...    ${TC_E2E_060['NAICSCode']}    ${TC_E2E_060['UnderwriterName']}    ${TC_E2E_060['UnderwriterEmail']} 
-<<<<<<< HEAD
      ...    ${TC_E2E_060['UnderwrittingOffice']}     ${TC_E2E_060['OperationsName']}    ${TC_E2E_060['OperationsEmail']}    ${TC_E2E_060['Channel']}
    Click Finish Tab
    Run Keyword And Continue On Failure    Verify and click the save and close button
@@ -1770,26 +1763,12 @@ TC_E2E_060
     Run Keyword And Continue On Failure    Save and verify mail in Draft    ${TC_E2E_060['emailData']} 
     Run Keyword And Continue On Failure    Discard the Created Email    ${TC_E2E_060['emailData']}      
     Run Keyword And Continue On Failure    Create New Mail With Missing Data    ${TC_E2E_060['emailData_Mising']}    ${TC_E2E_060['Expected_PopUp']}
-=======
-     ...    ${TC_E2E_060['UnderwrittingOffice']}     ${TC_E2E_060['OperationsName']}    ${TC_E2E_060['OperationsEmail']}    ${TC_E2E_060['Channel']}    ${TC_E2E_060['ProducerName']}
-   Click Finish Tab
-   Run Keyword And Continue On Failure    Verify and click the save and close button
-   Switch to Documents
-    @{expectedModification}    Create List    "${TC_E2E_003['SicCode']}"    "${TC_E2E_003['SicDescription']}"  
-     ...    "${TC_E2E_003['NAICSCode']}"    "${TC_E2E_003['UnderwriterName']}"    "${TC_E2E_003['UnderwriterEmail']}"   
-     ...    "${TC_E2E_003['UnderwrittingOffice']}"     "${TC_E2E_003['OperationsName']}"    "${TC_E2E_003['OperationsEmail']}"    "${TC_E2E_003['Channel']}"   
-     ...    "${TC_E2E_003['ProducerName']}"    "${TC_E2E_003['ProducerEmail']}"    "${TC_E2E_003['Covered']['Product']}"    "${TC_E2E_003['Covered']['ProductSegment']}" 
-   Run Keyword And Continue On Failure    Verify datas in UserModification file    @{expectedModification}
->>>>>>> 0cc751f5e746deaa767cd17e997cd0a6062db139
 #    Open uploaded SOV File   
 #    Run Keyword And Continue On Failure    Verify datas are matching for the uploaded SOV file    ${TC_E2E_003['SOVFile']}
 #    ${length}    Get Length    ${TC_E2E_003['dropdownOptions']}
 #    Run Keyword And Continue On Failure    Verify Properties datas for the given dropdown options    ${length}
 #    Run Keyword And Continue On Failure    Verify Loss run file is pending for stage 2
-<<<<<<< HEAD
     Run Keyword And Continue On Failure    Verify WorkFlow History    ${TC_E2E_060['expectedWorkFlowHistory']}
-=======
->>>>>>> 0cc751f5e746deaa767cd17e997cd0a6062db139
    Save Submission And verify popup
    Run Keyword And Continue On Failure    Verify Submission updated
    Run Keyword And Continue On Failure    Verify WorkFlow Options Advance Stage and Reject
@@ -1810,7 +1789,6 @@ TC_E2E_061
     Run Keyword And Continue On Failure    Verify Answers Lists    ${TC_E2E_061['expectedQuestion']}
     Run Keyword And Continue On Failure    Verify Company Website Link    ${TC_E2E_061['expectedTitle']}
     Run Keyword And Continue On Failure    Verify Risk360 Card Pages Navigation    ${TC_E2E_061['Risk360_Card_Names']}    ${TC_E2E_061['Risk360_Card_Pages_Names']}
-<<<<<<< HEAD
     Upload SOV and Loss Run Documents    @{TC_E2E_061['FileNames']}
     Wait for Upload to Complete
     Open uploaded SOV File   
@@ -1820,28 +1798,12 @@ TC_E2E_061
     Run Keyword And Continue On Failure    Verify Claims Data From Loss Run File
     # Verify Policies Data From Loss Run File
     Run Keyword And Continue On Failure    Verify Analysis Data From Loss Run File    ${TC_E2E_061['CardName']}    ${TC_E2E_061['expectedAnalysisData']}    ${TC_E2E_061['expectedTableData']}
-=======
-    Create New Task    ${TC_E2E_061['taskdata']}
-    Run Keyword And Continue On Failure    Verify the created task details    ${TC_E2E_061['taskDetails']}
-    # Create New Mail    ${TC_E2E_008['emailData']}
-    # Run Keyword And Continue On Failure    Verify Email Sent Successfully
-    # Run Keyword And Continue On Failure    Verify Sent Email    ${TC_E2E_008['emailVerify']}
-    # Open uploaded SOV File   
-    # Run Keyword And Continue On Failure    Verify datas are matching for the uploaded SOV file    ${TC_E2E_003['SOVFile']}
-    # ${length}    Get Length    ${TC_E2E_003['dropdownOptions']}
-    # Run Keyword And Continue On Failure    Verify Properties datas for the given dropdown options    ${length}
-    # Run Keyword And Continue On Failure    Verify Claims Data From Loss Run File
-    # # Verify Policies Data From Loss Run File
-    # Run Keyword And Continue On Failure    Verify Analysis Data From Loss Run File    ${TC_E2E_008['CardName']}    ${TC_E2E_008['expectedAnalysisData']}    ${TC_E2E_008['expectedTableData']}
-    # # Verify Schema by downloading the json file
->>>>>>> 0cc751f5e746deaa767cd17e997cd0a6062db139
     Run Keyword And Continue On Failure    Verify WorkFlow History    ${TC_E2E_061['expectedWorkFlowHistory']}
     Run Keyword And Continue On Failure    Save Submission And verify popup
     Run Keyword And Continue On Failure    Verify Submission updated in Stage 2
     Run Keyword And Continue On Failure    Verify WorkFlow Options Advance Stage and Reject
 
 
-<<<<<<< HEAD
 TC_E2E_062
     [Tags]    E2E-WithSov-Accord127
     [Documentation]    End to End Testing for New Submission - (Under Review stage + Child submission)  without SOV and LR upload"
@@ -1901,7 +1863,7 @@ TC_E2E_063
     # Select Impersonate option from the actions    ${NewUser['email']}    ${NewUser['search_user']}
     # Run Keyword And Continue On Failure    Verify My Assignments Tab is displayed as a default tab
     Click All submissions option
-    Select Submission using submission id    ${submission_id_sov}    @{TC_E2E_063['SubmissionColumnNames']}
+    Select Submission using submission id    a11b0fac-3268-44c0-bd9c-a2e8690a1fe8    @{TC_E2E_063['SubmissionColumnNames']}
     Run Keyword And Continue On Failure    Verify Submission page is displayed
     Advance Stage    ${TC_E2E_063['stageNo']}    
     Run Keyword And Continue On Failure    Verify Stage is updated in the submission    ${TC_E2E_063['stage']}
@@ -1920,8 +1882,6 @@ TC_E2E_063
     Run Keyword And Continue On Failure    Verify WorkFlow Options Advance Stage and Reject
 
 
-=======
->>>>>>> 0cc751f5e746deaa767cd17e997cd0a6062db139
 
 *** Keywords ***
 Run Pre-requiste Steps for Stage 1
