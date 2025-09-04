@@ -414,7 +414,7 @@ Fill the data for issues field in Producer
     ${ActualValue}    Get Text    ${ProducerName}
     ${TrimmedValue}    Strip String    ${ActualValue}
     Log    ${TrimmedValue}
-    IF    '${TrimmedValue}' =='' 
+    IF    '${TrimmedValue}' =='Edit' 
     Click    ${ProducerName}
     Type Text    ${ProducerNameInput}    ${data_producer_name}
     Get Element States    ${UserModForProducerName}    validate    value & visible    'UserModForProducerName should be visible.'       

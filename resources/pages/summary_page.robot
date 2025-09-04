@@ -127,11 +127,11 @@ Verify Policy PDF is Generated and Available in Documents Tab
     ...    ${expectedText1}     we need to pass the policy Information use in Summary Tab in Previous Stage  
     [Arguments]     ${expectedText1}
     ${Expected_Policy_text}    Create List
-    Append To List    ${Expected_Policy_text}    ${expectedText1['premium']}
+    Append To List    ${Expected_Policy_text}    ${expectedText1['premiumAmount']}
     Append To List    ${Expected_Policy_text}    ${expectedText1['AttachmentPoint']}  
     Append To List    ${Expected_Policy_text}    ${expectedText1['PolicyNumber']}  
     Append To List    ${Expected_Policy_text}    ${expectedText1['ClassOfBusiness']}  
-    Append To List    ${Expected_Policy_text}    ${expectedText1['PlacementType']}  
+    Append To List    ${Expected_Policy_text}    ${expectedText1['Policy Placement Type']}  
     @{actual_Policy_text}    Create List
     Switch To Documents
     ${elements}=    Get Elements    ${PolicyDataModification}

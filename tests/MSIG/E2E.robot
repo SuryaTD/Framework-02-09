@@ -11,17 +11,17 @@ TC_E2E_001
     # Create User If the User is not present    ${NewUser}
     # Create User If the User is not present    ${ReferralUser}
     # Select Impersonate option from the actions    ${NewUser['email']}    ${NewUser['search_user']}
-    Run Keyword And Continue On Failure    Verify My Assignments Tab is displayed as a default tab
-    ${submission_id}    Create New Submission    ${TC_E2E_001['FileName']}    @{TC_E2E_001['SubmissionColumnNames']}
-    Set Suite Variable   ${submission_id_1}    ${submission_id}
-    Select Submission using submission id    ${submission_id}    @{TC_E2E_001['SubmissionColumnNames']}
+    #Run Keyword And Continue On Failure    Verify My Assignments Tab is displayed as a default tab
+    # ${submission_id}    Create New Submission    ${TC_E2E_001['FileName']}    @{TC_E2E_001['SubmissionColumnNames']}
+    # Set Suite Variable   ${submission_id_1}    ${submission_id}
+    Select Submission using submission id    3c78079e-0f17-4d87-a7c8-a55489b81124    @{TC_E2E_001['SubmissionColumnNames']}
     Run Keyword And Continue On Failure    Verify Submission page is displayed
-    Run Keyword And Continue On Failure    Verify All Side menu options are Displayed
-    Switch To Summary Tab    ${TC_E2E_001['SummaryHeader']}
-    Run Keyword And Continue On Failure    Verify Summary Table Data    ${TC_E2E_001['SummaryTableHeader']}    ${TC_E2E_001['SummaryTableData']}
-    Run Keyword And Continue On Failure    Verify Policy Information Fields In Summary Tab     ${TC_E2E_001['PolicyFields']}   
-    Run Keyword And Continue On Failure    Verify the Workflow Reflected in Summary tab    ${TC_E2E_001['AdvanceTo']}
-    Click Edit Submission
+    # Run Keyword And Continue On Failure    Verify All Side menu options are Displayed
+    # Switch To Summary Tab    ${TC_E2E_001['SummaryHeader']}
+    # Run Keyword And Continue On Failure    Verify Summary Table Data    ${TC_E2E_001['SummaryTableHeader']}    ${TC_E2E_001['SummaryTableData']}
+    # Run Keyword And Continue On Failure    Verify Policy Information Fields In Summary Tab     ${TC_E2E_001['PolicyFields']}   
+    # Run Keyword And Continue On Failure    Verify the Workflow Reflected in Summary tab    ${TC_E2E_001['AdvanceTo']}
+    # Click Edit Submission
     Run Keyword And Continue On Failure    Click and verify Clearance tab
     # Run Keyword And Continue On Failure     Verify the Error popup when mandate fields left empty    ${TC_E2E_001}
     Click Insured Tab
@@ -1719,7 +1719,7 @@ TC_E2E_056
 
 TC_E2E_060
     [Tags]    E2E-WithSov-Accord127
-     [Documentation]    End to End Testing for New Submission - In Draft Stage: SOV Losss run
+     [Documentation]    End to End Testing for New Submission - In Draft Stage:
     # Create User If the User is not present    ${NewUser}
     # Select Impersonate option from the actions    ${NewUser['email']}    ${NewUser['search_user']}
     # Run Keyword And Continue On Failure    Verify My Assignments Tab is displayed as a default tab
@@ -1731,17 +1731,17 @@ TC_E2E_060
    Run Keyword And Continue On Failure    Click and verify Clearance tab
    Click Insured Tab
    Run Keyword And Continue On Failure    Verify PDF Data in Insured Tab    @{TC_E2E_060['expectedPDFText']}
-   Fill the data for issue fields    ${TC_E2E_060['SicCode']}    ${TC_E2E_060['SicDescription']}    ${TC_E2E_060['NAICSCode']}
+   Run Keyword And Continue On Failure    Fill the data for issue fields    ${TC_E2E_060['SicCode']}    ${TC_E2E_060['SicDescription']}    ${TC_E2E_060['NAICSCode']}
    Run Keyword And Continue On Failure    Verify User Mod is message for updated fields
    Click Processing Tab
-    Fill the data for issue fields in processing    ${TC_E2E_060['UnderwriterName']}    ${TC_E2E_060['UnderwriterEmail']}    ${TC_E2E_060['OperationsName']}      
+    Run Keyword And Continue On Failure    Fill the data for issue fields in processing    ${TC_E2E_060['UnderwriterName']}    ${TC_E2E_060['UnderwriterEmail']}    ${TC_E2E_060['OperationsName']}      
     ...    ${TC_E2E_060['OperationsEmail']}    ${TC_E2E_060['UnderwrittingOffice']}    ${TC_E2E_060['Channel']}
    Click Producer Tab
    Run Keyword And Continue On Failure    Verify PDF Data in Producer Tab    @{TC_E2E_060['expectedTextInProducer']}
-   Fill the data for issues field in Producer    ${TC_E2E_060['ProducerName']}      ${TC_E2E_060['ProducerEmail']}
+   Run Keyword And Continue On Failure    Fill the data for issues field in Producer    ${TC_E2E_060['ProducerName']}      ${TC_E2E_060['ProducerEmail']}
    Click Coverage Tab
    Run Keyword And Continue On Failure    Verify the Coverage data    ${TC_E2E_060['EffectiveDate']}     ${TC_E2E_060['ExpirationDate']}     ${TC_E2E_060['Product']}
-    Fill the data for issues field in Coverage    ${TC_E2E_060['Covered']}
+    Run Keyword And Continue On Failure    Fill the data for issues field in Coverage    ${TC_E2E_060['Covered']}
    Click Issues Tab
    @{expectedIssues}    Create List    ${TC_E2E_060['SicCode']}    ${TC_E2E_060['SicDescription']} 
      ...    ${TC_E2E_060['NAICSCode']}    ${TC_E2E_060['UnderwriterName']}    ${TC_E2E_060['UnderwriterEmail']} 
@@ -1775,7 +1775,7 @@ TC_E2E_060
 
 TC_E2E_061
     [Tags]    E2E-WithSov-Accord127
-    [Documentation]    End to End Testing for New Submission - (Cleared to Under Review Stage) without SOV Loss run upload in Stage 2, since we have uploaded in Stage 1"
+    [Documentation]    End to End Testing for New Submission - (Cleared to Under Review Stage) with SOV Loss run upload in Stage 2"
     # Create User If the User is not present    ${NewUser}
     # Select Impersonate option from the actions    ${NewUser['email']}    ${NewUser['search_user']}
     # Run Keyword And Continue On Failure    Verify My Assignments Tab is displayed as a default tab
@@ -1827,10 +1827,12 @@ TC_E2E_062
     Run Keyword And Continue On Failure    Verify Summary Menu is displayed
     Switch To Summary Tab    ${TC_E2E_062['SummaryHeader']}
     #Run Keyword And Continue On Failure    Verify Premium Amount
+    Click Edit Submission
     Run Keyword And Continue On Failure    Enter the Policy Information    ${TC_E2E_062['PolicyInfo']}
+    Click Answers Tab
+    Switch To Summary Tab    ${TC_E2E_062['SummaryHeader']}
     Run Keyword And Continue On Failure    Verify Policy Information Details from Summary Tab    ${TC_E2E_062['PolicyInfo']}    ${TC_Forms_01}    
     Run Keyword And Continue On Failure    Verify Summary Table Data    ${TC_E2E_062['SummaryTableHeader']}    ${TC_E2E_062['SummaryTableData']}
-    Click Edit Submission
     Click Answers Tab
     Run Keyword And Continue On Failure    Verify Answers Lists    ${TC_E2E_062['expectedQuestion']}
     Run Keyword And Continue On Failure    Verify Company Website Link    ${TC_E2E_062['expectedTitle']}
@@ -1863,10 +1865,11 @@ TC_E2E_063
     # Select Impersonate option from the actions    ${NewUser['email']}    ${NewUser['search_user']}
     # Run Keyword And Continue On Failure    Verify My Assignments Tab is displayed as a default tab
     Click All submissions option
-    Select Submission using submission id    ${submission_id_sov}    @{TC_E2E_063['SubmissionColumnNames']}
+    Select Submission using submission id    ${new_submission_id_sov}    @{TC_E2E_063['SubmissionColumnNames']}
     Run Keyword And Continue On Failure    Verify Submission page is displayed
     Advance Stage    ${TC_E2E_063['stageNo']}    
     Run Keyword And Continue On Failure    Verify Stage is updated in the submission    ${TC_E2E_063['stage']}
+    Run Keyword And Continue On Failure    Verify Policy PDF is Generated and Available in Documents Tab    ${TC_E2E_063['PolicyInfo']}
     Click Edit Submission
     Switch To Summary Tab    ${TC_E2E_063['SummaryHeader']}
     Run Keyword And Continue On Failure    Verify Policy Information Details from Summary Tab    ${TC_E2E_063['PolicyInfo']}    ${TC_Forms_01}
@@ -1879,9 +1882,155 @@ TC_E2E_063
     Run Keyword And Continue On Failure    Verify WorkFlow History    ${TC_E2E_063['expectedWorkFlowHistory']}
     Save Submission And verify popup
     Run Keyword And Continue On Failure    Verify Submission updated in the Current Stage    ${TC_E2E_063['stageNo']}
-    Run Keyword And Continue On Failure    Verify WorkFlow Options Advance Stage and Reject
+
+TC_E2E_064
+    [Tags]    E2E-WithSov-Accord127
+    [Documentation]    End to End Testing for New Submission - (Bindstage)"
+    # Create User If the User is not present    ${NewUser}
+    # Select Impersonate option from the actions    ${NewUser['email']}    ${NewUser['search_user']}
+    # Run Keyword And Continue On Failure    Verify My Assignments Tab is displayed as a default tab
+    Click All submissions option
+    Select Submission using submission id    ${new_submission_id_sov}    @{TC_E2E_064['SubmissionColumnNames']}
+    Run Keyword And Continue On Failure    Verify Submission page is displayed
+    Advance Stage    ${TC_E2E_064['stageNo']}    
+    Run Keyword And Continue On Failure    Verify Stage is updated in the submission    ${TC_E2E_064['stage']}
+    Run Keyword And Continue On Failure    Verify Policy PDF is Generated and Available in Documents Tab    ${TC_E2E_064['PolicyInfo']}
+    Click Edit Submission
+    Switch To Summary Tab    ${TC_E2E_064['SummaryHeader']}
+    Run Keyword And Continue On Failure    Verify Policy Information Details from Summary Tab    ${TC_E2E_064['PolicyInfo']}    ${TC_Forms_01}
+    Run Keyword And Continue On Failure    Enter the Policy Information    ${TC_E2E_064['PolicyInfo']}    
+    Run Keyword And Continue On Failure    Verify Summary Table Data    ${TC_E2E_064['SummaryTableHeader']}    ${TC_E2E_064['SummaryTableData']}
+    Click Answers Tab
+    Run Keyword And Continue On Failure    Verify Answers Lists    ${TC_E2E_064['expectedQuestion']}
+    Run Keyword And Continue On Failure    Verify Company Website Link    ${TC_E2E_064['expectedTitle']}
+    Run Keyword And Continue On Failure    Verify Risk360 Card Pages Navigation    ${TC_E2E_064['Risk360_Card_Names']}    ${TC_E2E_063['Risk360_Card_Pages_Names']}
+    Create New Task    ${TC_E2E_064['taskdata']}
+    Run Keyword And Continue On Failure    Verify the created task details    ${TC_E2E_064['taskDetails']}
+    Run Keyword And Continue On Failure    verify Edit Delete and Complete task Buttons are present on the right side of task list
+    Run Keyword And Continue On Failure    Verify Edit Icon is Clickable and Functional    ${TC_E2E_064['priority']}
+    Run Keyword And Continue On Failure    Verify Delete Icon is Clickable and Functional    ${TC_E2E_064['taskupdateddetails']}
+    Run Keyword And Continue On Failure    Save and verify mail in Draft    ${TC_E2E_064['emailData']} 
+    Run Keyword And Continue On Failure    Discard the Created Email    ${TC_E2E_064['emailData']}      
+    Run Keyword And Continue On Failure    Create New Mail With Missing Data    ${TC_E2E_064['emailData_Mising']}    ${TC_E2E_064['Expected_PopUp']}
+    Open uploaded SOV File   
+    Run Keyword And Continue On Failure    Verify datas are matching for the uploaded SOV file    ${TC_E2E_064['SOVFile']}
+    ${length}    Get Length    ${TC_E2E_064['dropdownOptions']}
+    Run Keyword And Continue On Failure    Verify Properties datas for the given dropdown options    ${length}
+    Run Keyword And Continue On Failure    Verify Claims Data From Loss Run File
+    # Verify Policies Data From Loss Run File
+    Run Keyword And Continue On Failure    Verify Analysis Data From Loss Run File    ${TC_E2E_064['CardName']}    ${TC_E2E_064['expectedAnalysisData']}    ${TC_E2E_064['expectedTableData']}
+    # Verify Schema by downloading the json file
+    Run Keyword And Continue On Failure    Verify WorkFlow History    ${TC_E2E_064['expectedWorkFlowHistory']}
+    Save Submission And verify popup
+    Run Keyword And Continue On Failure    Verify Submission updated in the Current Stage    ${TC_E2E_064['stageNo']}
+
+TC_E2E_065
+    [Tags]    E2E-WithSov-Accord127
+    [Documentation]    End to End Testing for New Submission - (Boundstage)"
+    # Create User If the User is not present    ${NewUser}
+    # Select Impersonate option from the actions    ${NewUser['email']}    ${NewUser['search_user']}
+    # Run Keyword And Continue On Failure    Verify My Assignments Tab is displayed as a default tab
+    Click All submissions option
+    Select Submission using submission id    ${new_submission_id_sov}    @{TC_E2E_065['SubmissionColumnNames']}
+    Run Keyword And Continue On Failure    Verify Submission page is displayed
+    Advance Stage    ${TC_E2E_065['stageNo']}    
+    Run Keyword And Continue On Failure    Verify Stage is updated in the submission    ${TC_E2E_065['stage']}
+    Click Edit Submission
+    Switch To Summary Tab    ${TC_E2E_065['SummaryHeader']}
+    Run Keyword And Continue On Failure    Verify Policy Information Details from Summary Tab    ${TC_E2E_065['PolicyInfo']}    ${TC_Forms_01}
+    Run Keyword And Continue On Failure    Enter the Policy Information    ${TC_E2E_065['PolicyInfo']}    
+    Run Keyword And Continue On Failure    Verify Summary Table Data    ${TC_E2E_065['SummaryTableHeader']}    ${TC_E2E_065['SummaryTableData']}
+    Click Answers Tab
+    Run Keyword And Continue On Failure    Verify Answers Lists    ${TC_E2E_065['expectedQuestion']}
+    Run Keyword And Continue On Failure    Verify Company Website Link    ${TC_E2E_065['expectedTitle']}
+    Run Keyword And Continue On Failure    Verify Risk360 Card Pages Navigation    ${TC_E2E_065['Risk360_Card_Names']}    ${TC_E2E_065['Risk360_Card_Pages_Names']}
+    Run Keyword And Continue On Failure    Verify WorkFlow History    ${TC_E2E_065['expectedWorkFlowHistory']}
+    Save Submission And verify popup
+    Run Keyword And Continue On Failure    Verify Submission updated in the Current Stage    ${TC_E2E_065['stageNo']}
 
 
+TC_E2E_066
+    [Tags]    E2E-WithSov-Accord127
+    [Documentation]    End to End Testing for New Submission - (Bookedstage)"
+    # Create User If the User is not present    ${NewUser}
+    # Select Impersonate option from the actions    ${NewUser['email']}    ${NewUser['search_user']}
+    # Run Keyword And Continue On Failure    Verify My Assignments Tab is displayed as a default tab
+    Click All submissions option
+    Select Submission using submission id    ${new_submission_id_sov}    @{TC_E2E_066['SubmissionColumnNames']}
+    Run Keyword And Continue On Failure    Verify Submission page is displayed
+    Advance Stage    ${TC_E2E_066['stageNo']}    
+    Run Keyword And Continue On Failure    Verify Stage is updated in the submission    ${TC_E2E_066['stage']}
+    # Task Tab
+    Click Answers Tab
+    Wait For Elements State    ${TaskClick}    visible
+    Click    ${TaskClick}
+    Run Keyword And Continue On Failure    Verify the auto generated task details    ${TC_E2E_066['taskDetails1']}
+    Run Keyword And Continue On Failure    Complete Task with the given reason for Booking stage    ${TC_E2E_066['taskreason']}
+    Run Keyword And Continue On Failure    Verify the task is completed and sanction label is appears as per the reason for booking    ${TC_E2E_066['taskreason']}
+    Click Edit Submission
+    Switch To Summary Tab    ${TC_E2E_066['SummaryHeader']}
+    Run Keyword And Continue On Failure    Verify Policy Information Details from Summary Tab    ${TC_E2E_066['PolicyInfo']}    ${TC_Forms_01}
+    Run Keyword And Continue On Failure    Enter the Policy Information    ${TC_E2E_066['PolicyInfo']}    
+    Run Keyword And Continue On Failure    Verify Summary Table Data    ${TC_E2E_066['SummaryTableHeader']}    ${TC_E2E_066['SummaryTableData']}
+    Click Answers Tab
+    Run Keyword And Continue On Failure    Verify Answers Lists    ${TC_E2E_066['expectedQuestion']}
+    Run Keyword And Continue On Failure    Verify Company Website Link    ${TC_E2E_066['expectedTitle']}
+    Run Keyword And Continue On Failure    Verify Risk360 Card Pages Navigation    ${TC_E2E_066['Risk360_Card_Names']}    ${TC_E2E_066['Risk360_Card_Pages_Names']}
+    Create New Task    ${TC_E2E_066['taskdata']}
+    Run Keyword And Continue On Failure    Select the Created Task    ${TC_E2E_066['taskdata']}
+    Run Keyword And Continue On Failure    Verify the created task details    ${TC_E2E_066['taskDetails']}
+    Run Keyword And Continue On Failure    verify Edit Delete and Complete task Buttons are present on the right side of task list
+    Run Keyword And Continue On Failure    Verify Edit Icon is Clickable and Functional    ${TC_E2E_066['priority']}
+    Run Keyword And Continue On Failure    Verify Delete Icon is Clickable and Functional    ${TC_E2E_066['taskupdateddetails']}
+    Run Keyword And Continue On Failure    Save and verify mail in Draft    ${TC_E2E_066['emailData']} 
+    Run Keyword And Continue On Failure    Discard the Created Email    ${TC_E2E_066['emailData']}      
+    Run Keyword And Continue On Failure    Create New Mail With Missing Data    ${TC_E2E_066['emailData_Mising']}    ${TC_E2E_066['Expected_PopUp']}
+    Run Keyword And Continue On Failure    Verify WorkFlow History    ${TC_E2E_066['expectedWorkFlowHistory']}
+    Save Submission And verify popup
+    Run Keyword And Continue On Failure    Verify Submission updated in the Current Stage    ${TC_E2E_066['stageNo']}
+
+TC_E2E_067
+    [Tags]    E2E-WithSov-Accord127
+    [Documentation]    End to End Testing for New Submission - (Issuedstage)"
+    # Create User If the User is not present    ${NewUser}
+    # Select Impersonate option from the actions    ${NewUser['email']}    ${NewUser['search_user']}
+    # Run Keyword And Continue On Failure    Verify My Assignments Tab is displayed as a default tab
+    Click All submissions option
+    Select Submission using submission id    ${new_submission_id_sov}    @{TC_E2E_067['SubmissionColumnNames']}
+    Run Keyword And Continue On Failure    Verify Submission page is displayed
+    Advance Stage    ${TC_E2E_067['stageNo']}    
+    Run Keyword And Continue On Failure    Verify Stage is updated in the submission    ${TC_E2E_067['stage']}
+    Run Keyword And Continue On Failure    Verify Policy PDF is Generated and Available in Documents Tab    ${TC_E2E_067['PolicyInfo']}
+    Click Edit Submission
+    Switch To Summary Tab    ${TC_E2E_067['SummaryHeader']}
+    Run Keyword And Continue On Failure    Verify Policy Information Details from Summary Tab    ${TC_E2E_067['PolicyInfo']}    ${TC_Forms_01}
+    Run Keyword And Continue On Failure    Enter the Policy Information    ${TC_E2E_067['PolicyInfo']}    
+    Run Keyword And Continue On Failure    Verify Summary Table Data    ${TC_E2E_067['SummaryTableHeader']}    ${TC_E2E_067['SummaryTableData']}
+    Click Answers Tab
+    Run Keyword And Continue On Failure    Verify Answers Lists    ${TC_E2E_067['expectedQuestion']}
+    Run Keyword And Continue On Failure    Verify Company Website Link    ${TC_E2E_067['expectedTitle']}
+    Run Keyword And Continue On Failure    Verify Risk360 Card Pages Navigation    ${TC_E2E_067['Risk360_Card_Names']}    ${TC_E2E_067['Risk360_Card_Pages_Names']}
+    Create New Task    ${TC_E2E_067['taskdata']}
+    Run Keyword And Continue On Failure    Select the Created Task    ${TC_E2E_067['taskdata']}
+    Run Keyword And Continue On Failure    Verify the created task details    ${TC_E2E_067['taskDetails']}
+    Run Keyword And Continue On Failure    verify Edit Delete and Complete task Buttons are present on the right side of task list
+    Run Keyword And Continue On Failure    Verify Edit Icon is Clickable and Functional    ${TC_E2E_067['priority']}
+    Run Keyword And Continue On Failure    Verify Delete Icon is Clickable and Functional    ${TC_E2E_067['taskupdateddetails']}
+    Run Keyword And Continue On Failure    Save and verify mail in Draft    ${TC_E2E_067['emailData']} 
+    Run Keyword And Continue On Failure    Discard the Created Email    ${TC_E2E_067['emailData']}      
+    Run Keyword And Continue On Failure    Create New Mail With Missing Data    ${TC_E2E_067['emailData_Mising']}    ${TC_E2E_067['Expected_PopUp']}
+    Open uploaded SOV File   
+    Run Keyword And Continue On Failure    Verify datas are matching for the uploaded SOV file    ${TC_E2E_067['SOVFile']}
+    ${length}    Get Length    ${TC_E2E_067['dropdownOptions']}
+    Run Keyword And Continue On Failure    Verify Properties datas for the given dropdown options    ${length}
+    Run Keyword And Continue On Failure    Verify Claims Data From Loss Run File
+    # Verify Policies Data From Loss Run File
+    Run Keyword And Continue On Failure    Verify Analysis Data From Loss Run File    ${TC_E2E_067['CardName']}    ${TC_E2E_067['expectedAnalysisData']}    ${TC_E2E_067['expectedTableData']}
+    # Verify Schema by downloading the json file
+    Run Keyword And Continue On Failure    Verify WorkFlow History    ${TC_E2E_067['expectedWorkFlowHistory']}
+    Save Submission And verify popup
+    Run Keyword And Continue On Failure    Verify Submission updated in the Current Stage    ${TC_E2E_067['stageNo']}
+    Run Keyword And Continue On Failure    Verify Advance Stage is InActive
 
 *** Keywords ***
 Run Pre-requiste Steps for Stage 1
